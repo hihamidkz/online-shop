@@ -12,7 +12,6 @@ Feature: Product list page
   @plp02
   Scenario: plp02 - Filtering on the product list page
     Given I am on a Product lister page
-		When I select the filter (...)
-		And I click the button to confirm filtering
+	When I select the filter (...)
+	And I click the button to confirm filtering
     Then The page is filtered to only show (...) products
-  

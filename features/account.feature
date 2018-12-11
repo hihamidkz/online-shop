@@ -30,13 +30,9 @@ Feature: Account
 		And I see the notification that I am logged out
 		
 	@acc04
-	Scenario Outline: acc04 - Successful Sign up
+	Scenario: acc04 - Successful Sign up
 		Given I am not signed up
 		When I click the sign up button
 		Then I see sign up form
-		When I write valid <username> and <password>
+		When I write valid username and password
 		Then I am successfully signed up
-		
-		Examples:
-			| username | password |
-			| "someuser" | "N17dNE^QpEz3HdfA" |
