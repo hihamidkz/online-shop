@@ -4,8 +4,29 @@
     <title>Home</title>
   </head>
   <body>
-    <h4>Book'ля</h4>
-    <h3>Бестселлеры, новинки и классика от триллеров до поэзии</h3>
+    <div class="header">
+        <ul>
+          <li><h4>Book'ля</h4></li>
+          <span class="sign_in">
+            <li><%= link_to 'Войти', new_user_session_path %></li>
+            <span class="sign_up">
+              <li><%= link_to 'Зарегистрироваться', new_user_registration_path %></li>
+            </span>
+          </span>
+        </ul>
+      <h3 class="h3">Бестселлеры, новинки и классика от триллеров до поэзии</h3>
+    </div>
+    <div class="topnav">
+      <%= link_to 'Каталог книг', books_path %>
+    </div>
+      <div class="column side">
+        <p>Hello</p>
+      </div>
+      <div class="column middle">
+        <p>Hello</p>
+      </div>
+      <div class="column side">
+        <p>Hello</p>
+      </div>
   </body>
-<%= link_to 'Войти или зарегистрироваться', action: 'profile', controller: 'persons' %>
 </html>

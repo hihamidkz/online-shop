@@ -12,37 +12,37 @@
   <% end %>
 
   <div class="field">
-    <%= form.input :title, required: true, input_html: { class:"input"}, wrapper: false,
-    	label_html: { class:"label" }%>
-  </div>
-
-  <div class="field">
-    <%= form.input :author, required: true, input_html: { class:"input"}, wrapper: false,
-    	label_html: { class:"label" }%>
-  </div>
-
-  <div class="field">
-    <%= form.label :year %>
-    <%= form.text_field :year %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price, required: true %>
-    <%= form.text_field :price %>
-  </div>
-
-  <div class="field">
-    <%= form.input :genre, required: false, input_html: { class:"input"}, wrapper: false,
+    <%= form.input :title, :label => "Название", required: true, input_html: { class:"title"}, wrapper: false,
     	label_html: { class:"label" } %>
   </div>
 
   <div class="field">
-    <%= form.input :description, required: true, input_html: { class:"textarea" }, wrapper: false,
+    <%= form.input :author, :label => "Автор", required: true, input_html: { class:"author"}, wrapper: false,
+    	label_html: { class:"label" }%>
+  </div>
+
+  <div class="field">
+    <%= form.input :year, as: :string, label: "Год издания", input_html: { class:"year_text"}, wrapper: false,
+    	label_html: { class:"label" }%>
+  </div>
+
+  <div class="field">
+    <%= form.input :price, as: :string, label: "Цена", required: true, input_html: { class:"price_text"}, wrapper: false,
+    	label_html: { class:"label" }%>
+  </div>
+
+  <div class="field">
+    <%= form.input :genre, :label => "Жанр", required: false, input_html: { class:"genre"}, wrapper: false,
     	label_html: { class:"label" } %>
   </div>
 
   <div class="field">
-    <%= form.input :image, as: :file, input_html: { class:"file-input book-page" }, label: false, wrapper: false %>
+    <%= form.input :description, :label => "Описание", required: true, input_html: { class:"textarea" }, wrapper: false,
+    	label_html: { class:"label" } %>
+  </div>
+
+  <div class="field">
+    <%= form.input :image, as: :file, reduired: true, input_html: { class:"file-input book-page" }, label: false, wrapper: false %>
   </div>
 
   <div class="actions">

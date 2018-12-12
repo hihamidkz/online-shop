@@ -36,6 +36,7 @@ gem 'mini_magick', '~> 4.8'
 gem 'devise'
 gem 'simple_form'
 gem 'carrierwave'
+gem 'bulma-rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

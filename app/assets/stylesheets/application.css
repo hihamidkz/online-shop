@@ -13,3 +13,84 @@
  *= require_tree .
  *= require_self
  */
+
+@import "functions";
+
+body {
+  background-color: #f5f5f5;
+  font-family: 'Lora', serif;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+.book-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.book-index-grid .book {
+  word-wrap: break-word;
+  width: 80%;
+  border-left: 0;
+  border-top: 0;
+  position: relative;
+  min-height: 375px;
+}
+
+.book-index-grid .book .title {
+  line-height: 1.6rem;
+}
+
+.book-index-grid .book .price {
+  position: absolute;
+  bottom: 0px;
+  right: 100px;
+}
+
+.book-index-grid .book .author {
+  position: absolute;
+  bottom: 0px;
+  right: 200px;
+}
+
+.book-thumb {
+  position: relative;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.book-thumb img {
+  max-width: 100%;
+  widows: 100%;
+}
+
+.book-thumb img :hover {
+  opacity: 9;
+}
+
+.column {
+  min-height: 100%;
+  max-height: 100%;
+  float: left;
+}
+
+/* Left and right column */
+.column.side {
+  width: 15%;
+  background-color: aquamarine;
+}
+
+/* Middle column */
+.column.middle {
+  width: 70%;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}

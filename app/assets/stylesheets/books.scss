@@ -1,3 +1,77 @@
 // Place all the styles related to the Books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "functions";
+
+  .header_books {
+    background-color: #FFDF4F;
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 0.5px;
+    padding-bottom: 0.5px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+
+  .field {
+    margin-bottom: 10px;
+  }
+
+  .title {
+      width: 10%;
+      margin-left: 50px; 
+  }
+
+  .author {
+    width: 10%;
+    margin-left: 83px;
+  }
+
+  .year_text {
+    width: 10%;
+    margin-left: 38px;
+  }
+
+  .price_text {
+    width: 10%;
+    margin-left: 89px;
+  }
+
+  .genre {
+    width: 10%;
+    margin-left: 97px;
+  }
+
+  .book-show .feature-image img {
+    width: 100%;
+  }
+
+  .book-show .add-to-cart {
+    width: 100%;
+  }
+
+  .td {
+    width: 25%;
+    padding-left: 20px;
+  }
+
+  .td_desc {
+    width: 30%;
+    padding-top: 20px;
+    padding-left: 20px;
+    vertical-align: top;
+    line-height: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: fw3;
+  }
+
