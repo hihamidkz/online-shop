@@ -1,33 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="header_books">
+  <h3>Book'ля</h3>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+<% content_for :body_class, 'bg_light' %>
 
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
-
-<p>
-  <strong>Year:</strong>
-  <%= @book.year %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @book.price %>
-</p>
-
-<p>
-  <strong>Genre:</strong>
-  <%= @book.genre %>
-</p>
-
-<p>
-  <strong>Description:</strong>
+<div class="column side">
+<p>Hello</p>
+</div>
+<div class="column middle">
+<table>
+  <tr><td>
+  <p style="padding-left: 20px;"><%= @book.author %></p>
+  <% if @book.year? %>
+    <p style="padding-left: 20px;"><%= @book.year %></<%=  %>>
+  <% end %>
+  </td>
+  <td>
+  </td></tr>
+  <tr><td style="padding-left: 20px;">
+    <h1><%= @book.title %></h1>
+  </td>
+  <td class="td">
+    <h4><%= number_to_currency(@book.price) %></h4>
+    <%= button_to 'Добавить в корзину', '#' %>
+  </td>
+  </tr>
+  <tr><td class="td">
+  <%= image_tag(@book.image_url(:default)) %>
+  </td>
+  <td class="td_desc">
   <%= @book.description %>
-</p>
-
-<%= link_to 'Back', books_path %>
+  </td>
+  <td></td>
+  </tr>
+</table>
+</div>
