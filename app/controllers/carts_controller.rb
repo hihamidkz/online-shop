@@ -77,4 +77,5 @@ rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
     def invalid_cart
       logger.error "Attempt to access invalid cart #{params[:id]}"
       redirect_to root_path, notice: "That cart doesn't exist"
+    end
 end

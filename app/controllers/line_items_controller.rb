@@ -27,7 +27,7 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
   def create
     book = Book.find(params[:book_id])
-    @line_item = @cart.add_book(line_item_params)
+    @line_item = @cart.add_book(book)
 
     respond_to do |format|
       if @line_item.save
