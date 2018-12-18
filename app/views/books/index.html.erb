@@ -3,12 +3,22 @@
 <div class="header">
   <ul>
     <li><h4>Book'ля</h4></li>
-      <span class="sign_in">
-        <li><%= link_to 'Войти', new_user_session_path %></li>
-        <span class="sign_up">
-          <li><%= link_to 'Зарегистрироваться', new_user_registration_path %></li>
+      <% unless user_signed_in? %>
+        <span class="sign_in">
+          <li><%= link_to 'Войти', new_user_session_path %></li>
+          <span class="sign_up">
+            <li><%= link_to 'Зарегистрироваться', new_user_registration_path %></li>
+          </span>
         </span>
-      </span>
+      <% end %>
+      <% if user_signed_in? %>
+        <span class="sign_in">
+          <li></p>Здравствуйте, <%= current_user.email %></p></li>
+          <span class="sign_up">
+            <li><%= link_to 'Выйти', destroy_user_session_path, :method => :delete %></li>
+          </span>
+        </span>
+      <% end %>
   </ul>
 </div>
 
