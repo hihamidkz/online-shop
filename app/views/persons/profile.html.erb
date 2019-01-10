@@ -6,4 +6,5 @@
 <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
 <% else %>
 <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
-<% end %>
+<% end %> <br> <br>
+<%= link_to 'На главную', books_path %>

@@ -1,22 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<div class="header_books">
-  <h3>Book'ля</h3>
+<div class="header">
+  <ul>
+    <li><h4>Book'ля</h4></li>
+      <% unless user_signed_in? %>
+        <span class="sign_in">
+          <li><%= link_to 'Войти', new_user_session_path %></li>
+          <span class="sign_up">
+            <li><%= link_to 'Зарегистрироваться', new_user_registration_path %></li>
+          </span>
+        </span>
+      <% end %>
+      <% if user_signed_in? %>
+        <span class="sign_in">
+          <li></p>Здравствуйте, <%= current_user.email %></p></li>
+          <span class="sign_up">
+            <li><%= link_to 'Выйти', destroy_user_session_path, :method => :delete %></li>
+          </span>
+        </span>
+      <% end %>
+  </ul>
 </div>
 
-<div class="book-index-grid pt4">
-  <% @books.each do |book| %>
-    <div class="book">
-      <%= link_to (image_tag(book.image_url(:thumb))), book %>
-    
+<div class="column side">
+<p></p>
+</div>
 
-      <div class="pa3">
-        <h3 class="fw7 fw4"><%= link_to book.title, book %></h3>
-        <p class="pt0"><%= book.author %></p>
-        <p class="fw3 fw6 pt2 "><%= number_to_currency(book.price) %></p>
+<div class="column middle">
+  <div class="book-index-grid pt4">
+    <% @books.each do |book| %>
+      <div class="book">
+        <%= link_to (image_tag(book.image_url(:thumb))), book %>
+      
+
+        <div class="pa3">
+          <h3 class="fw7 fw4"><%= link_to book.title, book %></h3>
+          <p class="pt0"><%= book.author %></p>
+          <p class="fw3 fw6 pt2 "><%= number_to_currency(book.price) %></p>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
 
 <br>
