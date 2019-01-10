@@ -14,11 +14,13 @@ class BooksController < ApplicationController
 
   # GET /books/new
   def new
+    authenticate_admin
     @book = Book.new
   end
 
   # GET /books/1/edit
   def edit
+    authenticate_admin
   end
 
   # POST /books
