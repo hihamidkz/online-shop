@@ -1,0 +1,11 @@
+first:
+  title: 'Alice in wonderland'
+  author: 'Lewis Carrol'
+  price: 10
+  year: 2010
+
+second:
+  title: 'Dubrowsky'
+  author: 'Pushkin'
+  price: 5
+  year: 2009
